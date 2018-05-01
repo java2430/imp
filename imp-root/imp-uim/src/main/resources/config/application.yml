@@ -1,0 +1,23 @@
+# server相关配置.
+server:
+  port: 8081
+
+spring:
+  application:
+    name: imp-uim
+  datasource:
+      url: jdbc:mysql://39.105.70.119:3306/db_imp?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: imp
+      password: impA2430!
+      type: com.alibaba.druid.pool.DruidDataSource
+      druid:
+        driver-class-name: com.mysql.jdbc.Driver
+        initial-size: 10
+        max-active: 30
+        min-idle: 10
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
