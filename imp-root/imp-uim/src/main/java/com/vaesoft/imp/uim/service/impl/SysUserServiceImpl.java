@@ -35,4 +35,9 @@ public class SysUserServiceImpl implements SysUserService {
 		return sysUserDao.findAll(pageable);
 	}
 
+	@Override
+	public SysUser findByUserName(String username) {
+		return sysUserDao.findByUsername(username);
+	}
+
 }

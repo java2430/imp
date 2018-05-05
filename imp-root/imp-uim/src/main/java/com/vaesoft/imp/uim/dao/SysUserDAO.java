@@ -8,4 +8,5 @@ import com.vaesoft.imp.uim.entity.SysUser;
 @Repository
 public interface SysUserDAO extends JpaRepository<SysUser, String> {
 
+	SysUser findByUsername(String username);
 }

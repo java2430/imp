@@ -13,5 +13,7 @@ public interface SysUserService {
 	List<SysUser> findAll();
 
 	Page<SysUser> findPage(int page, int size);
+	
+	SysUser findByUserName(String username);
 
 }
