@@ -28,6 +28,8 @@ public class BaseEntityListener {
 	 */
 	@PreUpdate
 	public void updateEntity(BaseEntity baseEntity) {
+		
+		System.out.println("===========");
 		baseEntity.setUpdateTime(new Date());
 	}
 }

@@ -3,6 +3,7 @@ package com.vaesoft.imp.uim.service.impl;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.transaction.Transactional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -38,6 +39,12 @@ public class SysUserServiceImpl implements SysUserService {
 	@Override
 	public SysUser findByUserName(String username) {
 		return sysUserDao.findByUsername(username);
+	}
+
+	@Override
+	@Transactional
+	public void updateEmailByUsername(String email, String username) {
+		sysUserDao.update(email, username);
 	}
 
 }

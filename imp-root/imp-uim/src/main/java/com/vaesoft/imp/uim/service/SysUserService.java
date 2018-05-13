@@ -15,5 +15,7 @@ public interface SysUserService {
 	Page<SysUser> findPage(int page, int size);
 	
 	SysUser findByUserName(String username);
+	
+	void updateEmailByUsername(String email,String username);
 
 }
